@@ -11,8 +11,8 @@ class ContactController extends Controller
         $this->validate($request, [
             'name' => 'required',
             'email' => 'required|email',
-            'subject'=>'required',
-            'message' => 'required'
+            'phone'=>'required',
+            'comments' => 'required'
         ]);
 
         $contact = Contact::create($request->all());
